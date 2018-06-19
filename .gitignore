@@ -1,0 +1,10 @@
+build.xml
+db_juegos.db
+manifest.mf
+build
+dist
+nbproject
+src/listadejuegos/DialogoDeEdicion.form
+src/listadejuegos/Filtrador.form
+src/listadejuegos/GestorCategorias.form
+src/listadejuegos/VentanaLisJue.form
