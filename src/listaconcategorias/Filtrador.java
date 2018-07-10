@@ -1,4 +1,4 @@
-package listadejuegos;
+package listaconcategorias;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -6,7 +6,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class Filtrador extends javax.swing.JDialog {
 
-    private final ListaJuegosDB basededatos = new ListaJuegosDB();
+    private final ListaDB basededatos = new ListaDB();
     private GrupoDeFiltros grupoFiltros;
     private boolean enviar = false;
     private boolean toggleG = true;
@@ -169,7 +169,6 @@ public class Filtrador extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(600, 350));
-        setPreferredSize(new java.awt.Dimension(750, 350));
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         Panel_fondo.setBackground(new java.awt.Color(51, 51, 51));

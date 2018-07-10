@@ -1,4 +1,4 @@
-package listadejuegos;
+package listaconcategorias;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -7,7 +7,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class GestorCategorias extends javax.swing.JDialog {
 
-    private final ListaJuegosDB basededatos = new ListaJuegosDB();
+    private final ListaDB basededatos = new ListaDB();
 
     public GestorCategorias(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -108,7 +108,6 @@ public class GestorCategorias extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(730, 320));
-        setPreferredSize(new java.awt.Dimension(830, 320));
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));

@@ -1,16 +1,16 @@
-package listadejuegos;
+package listaconcategorias;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-public class VentanaLisJue extends javax.swing.JFrame {
+public class VentanaListado extends javax.swing.JFrame {
 
-    private final ListaJuegosDB basededatos = new ListaJuegosDB();
+    private final ListaDB basededatos = new ListaDB();
     private GrupoDeFiltros filtrosGlobales = new GrupoDeFiltros();
 
-    public VentanaLisJue() {
+    public VentanaListado() {
         initComponents();
         mostrarEnTabla();
         jScrollPane1.getViewport().setBackground(tabla_principal.getBackground());
@@ -311,20 +311,21 @@ public class VentanaLisJue extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaLisJue.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaListado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaLisJue.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaListado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaLisJue.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaListado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaLisJue.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaListado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaLisJue().setVisible(true);
+                new VentanaListado().setVisible(true);
             }
         });
     }

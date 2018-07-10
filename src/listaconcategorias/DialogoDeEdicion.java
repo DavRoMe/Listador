@@ -1,4 +1,4 @@
-package listadejuegos;
+package listaconcategorias;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,7 +8,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class DialogoDeEdicion extends javax.swing.JDialog {
 
-    private final ListaJuegosDB basededatos = new ListaJuegosDB();
+    private final ListaDB basededatos = new ListaDB();
     private boolean modo_edicion = false;
     private String idInicial = new String();
     private String[] infoInicial = new String[3];
