@@ -135,7 +135,7 @@ public class VentanaListado extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Juego", "Vista", "Plataforma", "Generos"
+                "Elemento", "Categoria_1", "Categotia_2", "Generos"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -151,10 +151,12 @@ public class VentanaListado extends javax.swing.JFrame {
         tabla_principal.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tabla_principal);
         if (tabla_principal.getColumnModel().getColumnCount() > 0) {
+            tabla_principal.getColumnModel().getColumn(0).setMinWidth(100);
             tabla_principal.getColumnModel().getColumn(1).setMinWidth(80);
             tabla_principal.getColumnModel().getColumn(1).setMaxWidth(100);
             tabla_principal.getColumnModel().getColumn(2).setMinWidth(80);
             tabla_principal.getColumnModel().getColumn(2).setMaxWidth(100);
+            tabla_principal.getColumnModel().getColumn(3).setMinWidth(100);
         }
 
         admin_btn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
