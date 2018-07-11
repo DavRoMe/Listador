@@ -251,7 +251,7 @@ public class VentanaListado extends javax.swing.JFrame {
 
     private void nuevo_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevo_btnActionPerformed
         DialogoDeEdicion editor = new DialogoDeEdicion(this, true);
-        editor.setTitle("Agregar nuevo juego");
+        editor.setTitle("Agregar nuevo elemento");
         editor.setVisible(rootPaneCheckingEnabled);
 
         mostrarEnTabla();
@@ -271,7 +271,7 @@ public class VentanaListado extends javax.swing.JFrame {
             }
 
             DialogoDeEdicion editor = new DialogoDeEdicion(this, true);
-            editor.setTitle("Editar juego");
+            editor.setTitle("Editar elemento");
             editor.cargaInfoDeJuego(info);
             editor.setVisible(rootPaneCheckingEnabled);
 

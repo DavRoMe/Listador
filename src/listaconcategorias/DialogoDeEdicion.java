@@ -51,17 +51,17 @@ public class DialogoDeEdicion extends javax.swing.JDialog {
 
         jLabel1.setForeground(new java.awt.Color(51, 204, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Nombre del juego");
+        jLabel1.setText("Nombre del elemento");
 
         jLabel2.setForeground(new java.awt.Color(51, 204, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Tipo de vista");
+        jLabel2.setText("Categoria_1");
 
         tipoDeVista_cb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NULL" }));
 
         jLabel3.setForeground(new java.awt.Color(51, 204, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Plataforma");
+        jLabel3.setText("Categoria_2");
 
         plataforma_cb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NULL" }));
 
@@ -332,8 +332,8 @@ public class DialogoDeEdicion extends javax.swing.JDialog {
     }//GEN-LAST:event_cancelar_btnActionPerformed
 
     private void addVista_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addVista_btnActionPerformed
-        String nombreVista = "" + JOptionPane.showInputDialog(null, "Nombre de la Vista a crear", "Creando"
-                + " nueva Vista", JOptionPane.PLAIN_MESSAGE);
+        String nombreVista = "" + JOptionPane.showInputDialog(null, "Nombre de la Categoria a crear", "Creando"
+                + " nueva Categoria", JOptionPane.PLAIN_MESSAGE);
 //        System.out.println(nombreVista);
         if (!nombreVista.equalsIgnoreCase("null")) {
             try {
@@ -348,8 +348,8 @@ public class DialogoDeEdicion extends javax.swing.JDialog {
     }//GEN-LAST:event_addVista_btnActionPerformed
 
     private void addPlataf_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlataf_btnActionPerformed
-        String nomPlataforma = "" + JOptionPane.showInputDialog(null, "Nombre de la Plataforma a crear", "Creando"
-                + " nueva Plataforma", JOptionPane.PLAIN_MESSAGE);
+        String nomPlataforma = "" + JOptionPane.showInputDialog(null, "Nombre de la Categoria a crear", "Creando"
+                + " nueva Categoria", JOptionPane.PLAIN_MESSAGE);
         if (!nomPlataforma.equalsIgnoreCase("null")) {
             try {
                 basededatos.agregaPlataforma(nomPlataforma);

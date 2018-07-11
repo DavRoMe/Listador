@@ -243,7 +243,7 @@ public class GestorCategorias extends javax.swing.JDialog {
 
             },
             new String [] {
-                "Id", "Vistas"
+                "Id", "Categoria_1"
             }
         ) {
             Class[] types = new Class [] {
@@ -284,7 +284,7 @@ public class GestorCategorias extends javax.swing.JDialog {
 
             },
             new String [] {
-                "Id", "Plataformas"
+                "Id", "Categoria_2"
             }
         ) {
             Class[] types = new Class [] {
@@ -376,8 +376,8 @@ public class GestorCategorias extends javax.swing.JDialog {
     }//GEN-LAST:event_btn_addGenActionPerformed
 
     private void btn_addVisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addVisActionPerformed
-        String nomVista = "" + JOptionPane.showInputDialog(null, "Nombre de la Vista a crear", "Creando"
-                + " nueva Vista", JOptionPane.PLAIN_MESSAGE);
+        String nomVista = "" + JOptionPane.showInputDialog(null, "Nombre de la Categoria a crear", "Creando"
+                + " nueva Categoria Principal", JOptionPane.PLAIN_MESSAGE);
         if (!nomVista.equalsIgnoreCase("null")) {
             try {
                 basededatos.agregaVista(nomVista);
@@ -393,7 +393,7 @@ public class GestorCategorias extends javax.swing.JDialog {
     private void btn_delVisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_delVisActionPerformed
         if (tabl_Vis.getSelectedRow() != -1) {
             String botones[] = {"Eliminar", "Cancelar"};
-            int eleccion = JOptionPane.showOptionDialog(null, "La Vista "
+            int eleccion = JOptionPane.showOptionDialog(null, "La Categoria "
                     + "seleccionada se eliminará de la base de datos", "Confirmar",
                     JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE,
                     null, botones, this);
@@ -411,8 +411,8 @@ public class GestorCategorias extends javax.swing.JDialog {
     }//GEN-LAST:event_btn_delVisActionPerformed
 
     private void btn_addPlatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addPlatActionPerformed
-        String nomPlataforma = "" + JOptionPane.showInputDialog(null, "Nombre de la Plataforma a crear", "Creando"
-                + " nueva Plataforma", JOptionPane.PLAIN_MESSAGE);
+        String nomPlataforma = "" + JOptionPane.showInputDialog(null, "Nombre de la Categoria a crear", "Creando"
+                + " nueva Categoria Secundaria", JOptionPane.PLAIN_MESSAGE);
         if (!nomPlataforma.equalsIgnoreCase("null")) {
             try {
                 basededatos.agregaPlataforma(nomPlataforma);
@@ -428,7 +428,7 @@ public class GestorCategorias extends javax.swing.JDialog {
     private void btn_delPlatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_delPlatActionPerformed
         if (tabl_Plat.getSelectedRow() != -1) {
             String botones[] = {"Eliminar", "Cancelar"};
-            int eleccion = JOptionPane.showOptionDialog(null, "La Plataforma "
+            int eleccion = JOptionPane.showOptionDialog(null, "La Categoria "
                     + "seleccionada se eliminará de la base de datos", "Confirmar",
                     JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE,
                     null, botones, this);
@@ -474,12 +474,12 @@ public class GestorCategorias extends javax.swing.JDialog {
     private void btn_edVisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_edVisActionPerformed
         if (tabl_Vis.getSelectedRow() != -1) {
             String botones[] = {"Renombrar", "Cancelar"};
-            int eleccion = JOptionPane.showOptionDialog(null, "¿Desea cambiar el nombre de la vista seleccionada?",
+            int eleccion = JOptionPane.showOptionDialog(null, "¿Desea cambiar el nombre de la Categoria seleccionada?",
                     "Renombrar", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, botones, this);
 
             if (eleccion == JOptionPane.YES_OPTION) {
                 String nuevoNombre = "" + JOptionPane.showInputDialog(null, "Escribe el nuevo nombre", "Modificando"
-                        + " nombre de la vista", JOptionPane.PLAIN_MESSAGE);
+                        + " nombre de la Categoria", JOptionPane.PLAIN_MESSAGE);
 
                 if (!nuevoNombre.equalsIgnoreCase("null")) {
                     String id = tabl_Vis.getValueAt(tabl_Vis.getSelectedRow(), 0).toString();
@@ -500,12 +500,12 @@ public class GestorCategorias extends javax.swing.JDialog {
     private void btn_edPlatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_edPlatActionPerformed
         if (tabl_Plat.getSelectedRow() != -1) {
             String botones[] = {"Renombrar", "Cancelar"};
-            int eleccion = JOptionPane.showOptionDialog(null, "¿Desea cambiar el nombre de la plataforma seleccionada?",
+            int eleccion = JOptionPane.showOptionDialog(null, "¿Desea cambiar el nombre de la Categoria seleccionada?",
                     "Renombrar", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, botones, this);
 
             if (eleccion == JOptionPane.YES_OPTION) {
                 String nuevoNombre = "" + JOptionPane.showInputDialog(null, "Escribe el nuevo nombre", "Modificando"
-                        + " nombre de la plataforma", JOptionPane.PLAIN_MESSAGE);
+                        + " nombre de la Categoria", JOptionPane.PLAIN_MESSAGE);
 
                 if (!nuevoNombre.equalsIgnoreCase("null")) {
                     String id = tabl_Plat.getValueAt(tabl_Plat.getSelectedRow(), 0).toString();
